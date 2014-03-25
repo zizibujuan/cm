@@ -6,9 +6,9 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.zizibujuan.drip.server.dao.ApplicationPropertyDao;
+import com.zizibujuan.cm.server.dao.ApplicationPropertyDao;
 import com.zizibujuan.cm.server.service.ApplicationPropertyService;
-import com.zizibujuan.drip.server.util.ApplicationPropertyKey;
+import com.zizibujuan.cm.server.util.ApplicationPropertyKey;
 
 /**
  * 系统属性服务实现类
