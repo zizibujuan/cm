@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: cm.server.mysql
+Bundle-SymbolicName: com.zizibujuan.cm.server.dao.mysql
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: com.zizibujuan.cm.server.dao.mysql.Activator
+Bundle-Vendor: zizibujuan.com
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.zizibujuan.cm.server.dao,
+ org.osgi.framework;version="1.3.0"

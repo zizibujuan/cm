@@ -1,4 +1,4 @@
-package com.zizibujuan.cm.server.mysql;
+package com.zizibujuan.cm.server.dao.mysql;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
