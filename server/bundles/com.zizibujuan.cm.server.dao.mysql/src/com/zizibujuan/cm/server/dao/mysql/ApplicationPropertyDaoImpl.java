@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import com.zizibujuan.cm.server.dao.ApplicationPropertyDao;
+import com.zizibujuan.cm.server.model.CodeRule;
 import com.zizibujuan.drip.server.util.dao.AbstractDao;
 import com.zizibujuan.drip.server.util.dao.DatabaseUtil;
 

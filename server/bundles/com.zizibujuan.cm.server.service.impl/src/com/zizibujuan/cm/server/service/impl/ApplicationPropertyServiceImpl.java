@@ -8,10 +8,10 @@ import org.slf4j.LoggerFactory;
 
 import com.zizibujuan.cm.server.dao.ApplicationPropertyDao;
 import com.zizibujuan.cm.server.service.ApplicationPropertyService;
-import com.zizibujuan.cm.server.util.ApplicationPropertyKey;
 
 /**
  * 系统属性服务实现类
+ * 
  * @author jinzw
  * @since 0.0.1
  */
@@ -21,9 +21,7 @@ public class ApplicationPropertyServiceImpl implements
 	private ApplicationPropertyDao applicationPropertyDao;
 	
 	@Override
-	public Long getNextAnonymouseId() {
-		// TODO:缓存?
-		String propertyName = ApplicationPropertyKey.DRIP_COOKIE_MAX_USER_ID;
+	public Long getNextLong(String propertyName){
 		Long id = applicationPropertyDao.getLong(propertyName);
 		id++;
 		applicationPropertyDao.putLong(propertyName, id);

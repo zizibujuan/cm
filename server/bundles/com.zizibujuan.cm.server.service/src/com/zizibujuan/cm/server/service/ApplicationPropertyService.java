@@ -10,12 +10,14 @@ import java.util.Properties;
  * @since 0.0.1
  */
 public interface ApplicationPropertyService {
-
+	
 	/**
-	 * 为匿名用户获取一个唯一标识
-	 * @return 匿名用户标识
+	 * 将对应的值加1，保存起来，并返回
+	 * 
+	 * @param propertyName 属性名
+	 * @return 新的属性值
 	 */
-	Long getNextAnonymouseId();
+	Long getNextLong(String propertyName);
 	
 	/**
 	 * 获取指定的key对应的字符串值
