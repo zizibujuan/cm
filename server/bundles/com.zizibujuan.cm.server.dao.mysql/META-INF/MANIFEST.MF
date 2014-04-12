@@ -10,3 +10,4 @@ Import-Package: com.zizibujuan.cm.server.dao,
  com.zizibujuan.cm.server.model,
  com.zizibujuan.drip.server.util.dao,
  org.osgi.framework;version="1.3.0"
+Service-Component: OSGI-INF/*.xml

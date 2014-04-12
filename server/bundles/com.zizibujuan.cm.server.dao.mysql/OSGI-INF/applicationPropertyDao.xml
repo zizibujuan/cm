@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" 
+	immediate="false" 
+	name="com.zizibujuan.cm.server.dao.mysql.applicationPropertyDaoImpl">
+   <implementation class="com.zizibujuan.cm.server.dao.mysql.ApplicationPropertyDaoImpl"/>
+   <service>
+      <provide interface="com.zizibujuan.cm.server.dao.ApplicationPropertyDao"/>
+   </service>
+</scr:component>
