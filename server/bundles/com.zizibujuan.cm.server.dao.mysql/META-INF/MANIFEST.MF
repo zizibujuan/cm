@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.zizibujuan.cm.server.dao.mysql
 Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: com.zizibujuan.cm.server.dao.mysql.Activator
 Bundle-Vendor: zizibujuan.com
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: com.zizibujuan.cm.server.dao,
  com.zizibujuan.cm.server.model,
  com.zizibujuan.drip.server.util.dao,
