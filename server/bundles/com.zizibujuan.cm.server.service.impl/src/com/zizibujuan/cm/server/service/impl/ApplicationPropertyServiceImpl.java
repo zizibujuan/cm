@@ -35,8 +35,7 @@ public class ApplicationPropertyServiceImpl implements
 	
 	@Override
 	public int getForInt(String propertyName) {
-		String s = applicationPropertyDao.getForString(propertyName);
-		return Integer.valueOf(s);
+		return applicationPropertyDao.getInt(propertyName);
 	}
 	
 	@Override

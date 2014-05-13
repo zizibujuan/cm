@@ -17,6 +17,8 @@ public interface ApplicationPropertyDao {
 	 * @return 属性值
 	 */
 	Long getLong(String propertyName);
+	
+	int getInt(String propertyName);
 
 	/**
 	 * 新增long类型的属性值

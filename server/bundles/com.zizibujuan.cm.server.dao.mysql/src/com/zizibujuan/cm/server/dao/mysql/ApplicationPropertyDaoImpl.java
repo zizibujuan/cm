@@ -28,6 +28,11 @@ public class ApplicationPropertyDaoImpl extends AbstractDao implements
 	public Long getLong(String propertyName) {
 		return DatabaseUtil.queryForLong(getDataSource(), SQL_GET_PROPERTY_LONG_VALUE, propertyName);
 	}
+	
+	@Override
+	public int getInt(String propertyName) {
+		return DatabaseUtil.queryForInt(getDataSource(), SQL_GET_PROPERTY_LONG_VALUE, propertyName);
+	}
 
 	private static final String SQL_UPDATE_LONG_VALUE = "UPDATE DRIP_PROPERTY_VALUE_NUMBER set PROPERTY_VALUE=? where KEY_ID=(SELECT DBID FROM DRIP_PROPERTY_KEY WHERE PROPERTY_KEY=?)";
 	@Override
