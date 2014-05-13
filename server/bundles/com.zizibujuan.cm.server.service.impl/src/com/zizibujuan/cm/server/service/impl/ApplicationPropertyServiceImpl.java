@@ -34,6 +34,12 @@ public class ApplicationPropertyServiceImpl implements
 	}
 	
 	@Override
+	public int getForInt(String propertyName) {
+		String s = applicationPropertyDao.getForString(propertyName);
+		return Integer.valueOf(s);
+	}
+	
+	@Override
 	public String getCityCodeByValue(String cityName) {
 		return applicationPropertyDao.getCityCodeByValue(cityName);
 	}

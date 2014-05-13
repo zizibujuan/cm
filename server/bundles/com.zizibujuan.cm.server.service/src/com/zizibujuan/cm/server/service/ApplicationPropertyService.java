@@ -20,16 +20,26 @@ public interface ApplicationPropertyService {
 	Long getNextLong(String propertyName);
 	
 	/**
-	 * 获取指定的key对应的字符串值
+	 * 获取指定key对应的字符串值
+	 * 
 	 * @param propertyName 键
-	 * @return 值
+	 * @return 字符串类型的值
 	 */
 	String getForString(String propertyName);
+	
+	/**
+	 * 获取指定key对应的int类型的值
+	 * 
+	 * @param propertyName 键
+	 * @return int类型的值
+	 */
+	int getForInt(String propertyName);
 	
 	// TODO：增加一个分组参数
 
 	/**
 	 * 根据城市名称获取城市编码
+	 * 
 	 * @param cityName 城市名称
 	 * @return 城市编码，如果找不到则返回null
 	 */
