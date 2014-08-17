@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: cm.server.configuratior
-Bundle-SymbolicName: com.zizibujuan.cm.server.configuratior
+Bundle-SymbolicName: com.zizibujuan.cm.server.configurator
 Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: com.zizibujuan.cm.server.configuratior.Activator
 Bundle-Vendor: zizibujuan.com
