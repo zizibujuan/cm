@@ -6,6 +6,9 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.zizibujuan.cm.server.dao.ApplicationPropertyDao;
 import com.zizibujuan.cm.server.model.CodeRule;
 import com.zizibujuan.drip.server.util.dao.AbstractDao;
@@ -20,18 +23,28 @@ import com.zizibujuan.drip.server.util.dao.DatabaseUtil;
  */
 public class ApplicationPropertyDaoImpl extends AbstractDao implements
 		ApplicationPropertyDao {
+	
+	private static final Logger logger = LoggerFactory.getLogger(ApplicationPropertyDaoImpl.class);
 
 	private static final String SQL_GET_PROPERTY_LONG_VALUE = "SELECT b.PROPERTY_VALUE FROM " +
 			"DRIP_PROPERTY_KEY a, DRIP_PROPERTY_VALUE_NUMBER b " +
 			"WHERE a.DBID = b.KEY_ID AND a.PROPERTY_KEY=?";
 	@Override
 	public Long getLong(String propertyName) {
-		return DatabaseUtil.queryForLong(getDataSource(), SQL_GET_PROPERTY_LONG_VALUE, propertyName);
+		Long result = DatabaseUtil.queryForLong(getDataSource(), SQL_GET_PROPERTY_LONG_VALUE, propertyName);
+		if(result == null){
+			logger.warn("没有查到\"{}\"属性值", propertyName);
+		}
+		return result;
 	}
 	
 	@Override
 	public int getInt(String propertyName) {
-		return DatabaseUtil.queryForInt(getDataSource(), SQL_GET_PROPERTY_LONG_VALUE, propertyName);
+		Integer result = DatabaseUtil.queryForInt(getDataSource(), SQL_GET_PROPERTY_LONG_VALUE, propertyName);
+		if(result == null){
+			logger.warn("没有查到\"{}\"属性值", propertyName);
+		}
+		return result;
 	}
 
 	private static final String SQL_UPDATE_LONG_VALUE = "UPDATE DRIP_PROPERTY_VALUE_NUMBER set PROPERTY_VALUE=? where KEY_ID=(SELECT DBID FROM DRIP_PROPERTY_KEY WHERE PROPERTY_KEY=?)";
@@ -51,7 +64,11 @@ public class ApplicationPropertyDaoImpl extends AbstractDao implements
 			"WHERE a.DBID = b.KEY_ID AND a.PROPERTY_KEY=?";
 	@Override
 	public String getForString(String propertyName) {
-		return DatabaseUtil.queryForString(getDataSource(), SQL_GET_PROPERTY_STRING_VALUE, propertyName);
+		String result = DatabaseUtil.queryForString(getDataSource(), SQL_GET_PROPERTY_STRING_VALUE, propertyName);
+		if(result == null){
+			logger.warn("没有查到\"{}\"属性值", propertyName);
+		}
+		return result;
 	}
 
 	private static final String SQL_GET_CITY_CODE_BY_VALUE = "SELECT CODE FROM DRIP_CODE_CITY WHERE VAL = ?";
